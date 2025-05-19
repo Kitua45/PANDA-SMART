@@ -14,7 +14,7 @@ Panda Smart Crop Recommendation System is an AI-powered web application designed
 🛠️ Technologies Used
 Python (Machine Learning with Naive Bayes)
 
-Flask / Django (for web integration) (adjust based on your stack)
+Flask for web integration.
 
 HTML, CSS, Bootstrap (Frontend UI)
 
