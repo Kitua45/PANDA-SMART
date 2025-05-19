@@ -1,0 +1,486 @@
+   /* Main styles - for the project */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: none;
+            overflow: hidden;
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .result-card {
+            display: none;
+        }
+        .crop-image {
+            max-width: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .parameter-box {
+            background-color: #f1f8e9;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        footer {
+            color: rgb(17, 17, 17);
+            padding: 20px 0;
+            text-align: center;
+            position: center;
+        }
+
+        /* Home button styles - modified from original design */
+        #home-button{
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            background-color: #007bff;
+            color: white;
+        }
+        #home-button:hover {
+            background-color: #0069d9;
+        }
+        .d-grid.gap-2{
+            margin-top: 10px;
+        }
+            
+        /* Weather widget styles - added during final year project 
+           Spent way too long getting these gradients right! */
+        .weather-widget {
+            background-color: black;
+            color: #fff;
+            transition: all 0.5s ease;
+            overflow: hidden;
+            border: none;
+            position: relative;
+        }
+        .weather-location h4 {
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        .weather-location h5 {
+            font-weight: 400;
+            opacity: 0.8;
+            font-size: 1rem;
+        }
+        .weather-icon img {
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+            width: 64px;
+            height: 64px;
+            transition: transform 0.3s ease;
+        }
+        .weather-icon img:hover {
+            transform: scale(1.1); /* neat little effect I found on stackoverflow */
+        }
+        .weather-temp {
+            font-weight: 600;
+        }
+        #weather-desc {
+            text-transform: capitalize;
+            opacity: 0.9;
+        }
+        .weather-details {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        .detail-label {
+            opacity: 0.8;
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+        .detail-value {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        .location-search-container {
+            margin-top: 15px;
+            width: 100%;
+        }
+        .search-input {
+            border-radius: 30px;
+            padding-left: 15px;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            height: 40px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .search-input:focus {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .search-btn {
+            border-radius: 30px;
+            height: 40px;
+            width: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .search-btn:hover {
+            background-color: #f8f9fa;
+        }
+        .my-location-btn {
+            cursor: pointer;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            margin-left: 10px;
+        }
+        .my-location-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+        
+        /* Rainfall feature styles - added May 2025 for project update */
+        .rainfall-feature {
+            position: relative;
+            padding: 15px;
+            margin-top: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .rainfall-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .rainfall-value {
+            font-size: 22px;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+        .rainfall-title {
+            margin-bottom: 5px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .rainfall-subtitle {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        
+        /* Use weather data button - needed for quick data prefill */
+        .use-weather-data-btn {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .use-weather-data-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        .use-weather-data-btn i {
+            margin-right: 5px;
+        }
+
+        /* Status indicators */
+        .weather-status {
+            padding: 5px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        /* Detail cards - had to remake these after they broke somehow */
+        .weather-detail-card {
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .weather-detail-card:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+        }
+        .detail-icon {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        /* Animations - borrowed some of these from my previous project */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes rainDrop {
+            0% { transform: translateY(-10px); opacity: 0; }
+            70% { opacity: 1; }
+            100% { transform: translateY(0); opacity: 0.8; }
+        }
+        .weather-animation {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        .rain-animation {
+            animation: rainDrop 1.5s ease-in infinite;
+        }
+
+        /* Popup styles for data confirmation - still needs work! */
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .popup-container.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .popup-content {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        .popup-container.active .popup-content {
+            transform: translateY(0);
+        }
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.3s ease;
+        }
+        .popup-close:hover {
+            color: #333;
+        }
+        .popup-title {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            font-weight: 600;
+        }
+        .popup-data-list {
+            margin-bottom: 20px;
+        }
+        .popup-data-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .popup-data-item:last-child {
+            border-bottom: none;
+        }
+        .popup-data-label {
+            font-weight: 500;
+        }
+        .popup-data-value {
+            font-weight: 400;
+            color: #0066cc;
+        }
+        .popup-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .popup-btn {
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-weight: 500;
+        }
+        .popup-btn-secondary {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        .popup-btn-secondary:hover {
+            background-color: #e1e1e1;
+        }
+        .popup-btn-primary {
+            background-color: #28a745;
+            color: white;
+        }
+        .popup-btn-primary:hover {
+            background-color: #218838;
+        }
+
+        /* Dark mode - added this cause my supervisor loves dark mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #eaeaea;
+            }
+            .card {
+                background-color: #1e1e1e;
+                color: #eaeaea;
+            }
+            .parameter-box {
+                background-color: #2a382a;
+            }
+            .weather-widget {
+                background: linear-gradient(135deg, #1e3c72, #2a5298);
+            }
+            .text-muted {
+                color: #aaa !important;
+            }
+            .search-input {
+                background-color: rgba(255,255,255,0.15);
+                color: white;
+            }
+            .search-input::placeholder {
+                color: rgba(255,255,255,0.6);
+            }
+            .search-btn {
+                background-color: rgba(255,255,255,0.2);
+                color: white;
+            }
+            .search-btn:hover {
+                background-color: rgba(255,255,255,0.3);
+            }
+            #weather-error {
+                background-color: rgba(255, 193, 7, 0.1);
+                color: #ffc107;
+                border-color: rgba(255, 193, 7, 0.2);
+            }
+            .popup-content {
+                background-color: #1e1e1e;
+                color: #eaeaea;
+            }
+            .popup-title {
+                border-bottom-color: #333;
+            }
+            .popup-data-item {
+                border-bottom-color: #333;
+            }
+            .popup-data-value {
+                color: #4da6ff;
+            }
+            .popup-close {
+                color: #777;
+            }
+            .popup-close:hover {
+                color: #ddd;
+            }
+            .popup-btn-secondary {
+                background-color: #333;
+                color: #eee;
+            }
+            .popup-btn-secondary:hover {
+                background-color: #444;
+            }
+        }
+
+        /* Responsive stuff - phones still give me trouble, ugh */
+        @media (max-width: 767px) {
+            .weather-info {
+                justify-content: center !important;
+                margin-top: 15px;
+            }
+            .weather-location {
+                text-align: center;
+                width: 100%;
+            }
+            .location-flex {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .my-location-container {
+                margin-top: 0;
+                margin-left: 15px;
+            }
+            .container {
+                margin-top: 20px;
+            }
+            .use-weather-data-btn {
+                position: relative;
+                bottom: unset;
+                right: unset;
+                margin: 15px auto 0;
+                display: block;
+                width: max-content;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            /* Tiny phone fixes - tested on my old iPhone 6 */
+            .detail-label, .detail-value {
+                font-size: 0.75rem;
+            }
+            .weather-temp .display-4 {
+                font-size: 2rem;
+            }
+            .weather-icon img {
+                width: 50px;
+                height: 50px;
+            }
+            .weather-location h4 {
+                font-size: 1.2rem;
+            }
+            .weather-location h5 {
+                font-size: 0.9rem;
+            }
+            .rainfall-value {
+                font-size: 18px;
+            }
+            .rainfall-icon {
+                font-size: 20px;
+            }
+        }
